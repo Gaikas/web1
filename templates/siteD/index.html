@@ -1,11 +1,15 @@
 {% extends 'siteD/base.html' %}
 
 {%block title%}
-Главная
+{{title1}}
 {% endblock%}
 
 {%block content%}
-    <h1>Главная страница</h1>
-    <p>Очень главная страница</p>
-    <h6>Самая главная страница</h6>
+<h1>Самая главная страница</h1>
+    {% for el in tasks %}
+    <div class = "alert alert-warning mt-2">
+        <h1>{{el.title}}</h1>
+        <p>{{el.task}}</p>
+    </div>
+    {% endfor %}
 {% endblock%}
